@@ -45,9 +45,7 @@ public class loginServlet extends HttpServlet {
             {
                  String host = request.getHeader("X-Forwarded-Host");
                  String proto = request.getHeader("X-Forwarded-Proto");
-                 response.sendRedirect(
-                proto + "://" + host + "/login.html"
-                );
+                 response.sendRedirect(proto+ "://"+host+"/login.html");
                 //response.sendRedirect("login.html");
             }
 
