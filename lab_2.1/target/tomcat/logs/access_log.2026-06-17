@@ -26,3 +26,6 @@
 0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:06:39 +0000] "GET /login.html HTTP/1.1" 304 - http-bio-8080-exec-3 2
 0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:06:47 +0000] "GET /login?user=dhgia&pass=fsdafsda HTTP/1.1" 302 - http-bio-8080-exec-5 4
 0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:06:57 +0000] "GET /login?user=van&pass=2344343 HTTP/1.1" 302 - http-bio-8080-exec-7 2
+0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:08:20 +0000] "GET /login?user=van&pass=123 HTTP/1.1" 200 135 http-bio-8080-exec-9 1
+0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:09:43 +0000] "GET /login.html HTTP/1.1" 200 439 http-bio-8080-exec-1 2
+0:0:0:0:0:0:0:1 - - [17/Jun/2026:07:09:51 +0000] "POST /login HTTP/1.1" 405 1067 http-bio-8080-exec-5 2
