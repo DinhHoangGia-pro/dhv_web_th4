@@ -1,76 +1,128 @@
-```jsp
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
-<%@ page import="model.Product" %>
-<%@ page import="dao.*" %>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Danh sách sản phẩm</title>
+    <title>Student register Form</title>
 
+    
     <style>
-        table{
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
+body
+{
 
-        th, td{
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
+    margin:0px;
+}
 
-        th{
-            background-color: #f2f2f2;
-        }
+input
+{
 
-        h2{
-            text-align: center;
-        }
+     width:300px;
+     height: 30px;
+     /* border:rgb(106, 201, 207) 1px solid; */
+}
+
+label
+{
+    display:block;
+}
+.form_group
+{
+    display: block;
+}
+
+.form_group.success input
+{
+    border:rgb(21, 192, 15) 1px solid;
+     
+}
+
+.form_group.error input
+{
+     border:rgb(235, 20, 31) 1px solid;
+     background-color: coral;
+
+}
+
+.bovien
+{
+    border: 1px solid #1013be;
+    
+}
+
+
+
     </style>
 </head>
 <body>
+    
 
-    <h2>DANH SÁCH SẢN PHẨM</h2>
+    <div id="container" style="width: 100%;  display: flex; justify-content: center;   ">
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Tên sản phẩm</th>
-            <th>Supplier ID</th>
-            <th>Category ID</th>
-            <th>Quantity Per Unit</th>
-            <th>Unit Price</th>
-            <th>Units In Stock</th>
-        </tr>
+     
 
-        <%
-            ProductDAO dao=new ProductDAO();
-            List<Product> list = dao.getAllProducts();
+        <div style="width:1000px; height: 300px; background-color: #eaf5d7;">
 
-            if(list != null){
-                for(Product p : list){
-        %>
+            <h1>Student Regiter Form</h1>
 
-        <tr>
-            <td><%= p.getProductID() %></td>
-            <td><%= p.getProductName() %></td>
-            <td><%= p.getSupplierID() %></td>
-            <td><%= p.getCategoryID() %></td>
-            <td><%= p.getQuantityPerUnit() %></td>
-            <td><%= p.getUnitPrice() %></td>
-            <td><%= p.getUnitsInStock() %></td>
-        </tr>
+            <form id="register_form">
 
-        <%
-                }
-            }
-        %>
+            
 
-    </table>
+                    <div class="form_group">
+                        <label for="sname">Student name</label>
+                        <input id="sname"/>
+                    </div>
+
+
+                     <div class="form_group">
+                        <label for="course">Course</label>
+                        <input id="course"/>
+                    </div>
+
+
+                     <div class="form_group">
+                        <label for="fee">Fee</label>
+                        <input id="fee"/>
+                    </div>
+
+
+                    
+
+
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+
+        </div>
+
+
+       
+
+    </div>
+
+
+<div id="container" style="width: 100%;  display: flex; justify-content: center;   ">
+     <div style="width:1000px; height: 300px; background-color: #f5f1d7;">
+
+            <table class="bovien">
+                <tr class="bovien">
+                    <td class="bovien" style="width:200px">Student Name</td>
+                    <td class="bovien" style="width:200px">Course</td>
+                    <td class="bovien" style="width:100px">Fee</td>
+                    <td class="bovien" style="width:100px">Edit</td>
+                    <td class="bovien" style="width:100px">Delete</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+</div>
+
+    
 
 </body>
 </html>
