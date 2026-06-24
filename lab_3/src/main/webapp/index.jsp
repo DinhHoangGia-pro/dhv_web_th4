@@ -51,6 +51,15 @@ label
     
 }
 
+table.bovien {
+    border-collapse: collapse;
+}
+
+th.bovien
+{
+    font-weight: bold;
+}
+
 
 
     </style>
@@ -109,11 +118,11 @@ label
 
             <table class="bovien">
                 <tr class="bovien">
-                    <td class="bovien" style="width:200px">Student Name</td>
-                    <td class="bovien" style="width:200px">Course</td>
-                    <td class="bovien" style="width:100px">Fee</td>
-                    <td class="bovien" style="width:100px">Edit</td>
-                    <td class="bovien" style="width:100px">Delete</td>
+                    <th class="bovien" style="width:300px">Student Name</td>
+                    <th class="bovien" style="width:250px">Course</td>
+                    <th class="bovien" style="width:100px">Fee</td>
+                    <th class="bovien" style="width:100px">Edit</td>
+                    <th class="bovien" style="width:100px">Delete</td>
                 </tr>
 
             </table>
