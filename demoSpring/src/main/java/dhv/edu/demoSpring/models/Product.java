@@ -1,15 +1,35 @@
 package dhv.edu.demoSpring.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "products")
 public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
+
     private double price;
 
     public Product() {
     }
 
+    // Giữ nguyên constructor cũ để code demo vẫn chạy
     public Product(int id, String name, double price) {
         this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+
+    // Thêm constructor tiện cho JPA
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }

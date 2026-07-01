@@ -1,3 +1,5 @@
 Chạy ứng dụng:
 1. Mở terminal chạy (để vào thư mục demoSpring): cd demoSpring
 2. mvn spring-boot:run
+
+3. /swagger-ui/index.html để mở open API
