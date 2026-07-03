@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import dhv.edu.demoSpring.models.Product;
 import dhv.edu.demoSpring.repository.ProductRepository;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class DHVController {

@@ -1,5 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
+<%@ page import="model.Record" %>
+<%@ page import="dao.*" %>
 
 <!DOCTYPE html>
 <html>
@@ -118,12 +120,33 @@ th.bovien
 
             <table class="bovien">
                 <tr class="bovien">
-                    <th class="bovien" style="width:300px">Student Name</td>
-                    <th class="bovien" style="width:250px">Course</td>
-                    <th class="bovien" style="width:100px">Fee</td>
-                    <th class="bovien" style="width:100px">Edit</td>
-                    <th class="bovien" style="width:100px">Delete</td>
+                    <th class="bovien" style="width:300px">Student Name</th>
+                    <th class="bovien" style="width:250px">Course</th>
+                    <th class="bovien" style="width:100px">Fee</th>
+                    <th class="bovien" style="width:100px">Edit</th>
+                    <th class="bovien" style="width:100px">Delete</th>
                 </tr>
+                <%
+            RecordDAO dao=new RecordDAO();
+            List<Record> list = dao.getAllRecords();
+
+            if(list != null){
+                for(Record p : list){
+            %>
+
+             <tr class="bovien">
+                <td class="bovien" style="width:300px"><%=p.GetStname()%></td>
+                    <td class="bovien" style="width:250px"><%=p.GetCourse()%></td>
+                    <td class="bovien" style="width:100px"><%=p.GetFee()%></td>
+                    <td class="bovien" style="width:100px">Edit</td>
+                    <td class="bovien" style="width:100px">Delete</td>
+
+             </tr>
+
+
+
+            <%} }%>
+
 
             </table>
 

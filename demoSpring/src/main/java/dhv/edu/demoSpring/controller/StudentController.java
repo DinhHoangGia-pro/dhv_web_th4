@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
 import dhv.edu.demoSpring.models.Product;
 
+@CrossOrigin(origins = "*")
 @RestController /*Chú thích đây là backend */
 public class StudentController 
 {
@@ -43,7 +44,7 @@ public List<String> listStudents() {
 
     //-------------------------------------------CRUD------------------------------
 
-    
+
 
 
 }
